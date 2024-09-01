@@ -1,0 +1,8 @@
+.main-body {
+  background-image: url("../../photos/therapist-talk.jpg");
+  background-size: cover;
+  height: 42rem;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
