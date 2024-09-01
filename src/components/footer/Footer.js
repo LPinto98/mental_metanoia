@@ -9,26 +9,6 @@ function Footer() {
       <div className="footer_logo">
         <img src={logo} alt="Logo" />
       </div>
-      <div className="links">
-        <div className="services">
-          <p>OUR SERVICES</p>
-          <div className="services_lists">Marriage</div>
-          <div className="services_lists">Marriage</div>
-          <div className="services_lists">Marriage</div>
-        </div>
-        <div className="aboutUs">
-          <p>ABOUT US</p>
-          <div className="aboutUs_lists">Contact us</div>
-          <div className="aboutUs_lists">Contact us</div>
-          <div className="aboutUs_lists">Contact us</div>
-        </div>
-        <div className="usefulLinks">
-          <p>USEFUL LINKS</p>
-          <div className="usefulLinks_lists">Experts</div>
-          <div className="usefulLinks_lists">Experts</div>
-          <div className="usefulLinks_lists">Experts</div>
-        </div>
-      </div>
 
       <div className="footer_icons">
         <button>

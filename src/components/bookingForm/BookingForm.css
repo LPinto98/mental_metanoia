@@ -1,0 +1,133 @@
+.booking_form {
+  position: relative;
+  top: 50%;
+  background-color: rgba(var(--secondary-light), 0.45);
+  backdrop-filter: blur(5px);
+  transform: translateY(-50%);
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* This applies to the entire form */
+  overflow: hidden; /* This makes sure the inner elements conform to the border radius */
+}
+
+.booking_form_left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.booking_form_left > img {
+  max-height: 100%; /* Make sure the image stretches to the height of the form */
+  max-width: 100%;
+  object-fit: cover; /* Maintain proportions while covering the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking_form_right {
+  flex: 1.5;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-top-right-radius: 15px; /* Curved top-right corner */
+  border-bottom-right-radius: 15px; /* Curved bottom-right corner */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+
+.booking_form_right > form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Slightly reduce spacing between form fields */
+}
+
+.form-control {
+  border-radius: 15px; /* Reduce the border radius */
+  border: 1px solid #ce93d8;
+  padding: 8px 12px; /* Decrease padding to make inputs smaller */
+  font-size: 0.9rem; /* Reduce font size */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ab47bc;
+  box-shadow: 0 0 4px rgba(171, 71, 188, 0.4);
+}
+
+.form-control::placeholder {
+  color: #6a1b9a; /* Placeholder color matches the previous label color */
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.form-floating > label {
+  color: #8e24aa; /* Set the label color to match the purple theme */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: #ab47bc; /* Darker purple when the label floats above */
+  transform: translateY(-10px); /* Floating label effect */
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #8e24aa, #d81b60);
+  border: none;
+  border-radius: 20px; /* Reduce border radius */
+  padding: 10px 20px; /* Decrease padding */
+  font-size: 0.9rem; /* Reduce font size */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #ab47bc, #ec407a);
+}
+
+/* Container for the Calendly iframe */
+.calendly-container {
+  background-color: rgba(var(--secondary-light), 0.45);
+  border: 2px solid #ce93d8; /* Match with your theme's border color */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendly-instructions {
+  color: #6a1b9a; /* Text color matching your theme */
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .booking_form {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px; /* Ensuring it remains curved on small screens */
+  }
+
+  .booking_form_left,
+  .booking_form_right {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0; /* Remove the radius when stacked */
+  }
+
+  .booking_form_left img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image maintains its proportions */
+  }
+}

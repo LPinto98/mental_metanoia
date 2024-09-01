@@ -1,26 +1,14 @@
 import React from "react";
 import logo from "../../photos/logo.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 function Navbar() {
-  const navigate = useNavigate();
-
-  const loginRoute = () => {
-    let path = `login`;
-    navigate(path);
-  };
-
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <img
-              className="logo"
-              src={logo}
-              alt="LOGO"
-              // style={{ maxWidth: "150px", maxHeight: "80px" }}
-            ></img>
+            <img className="logo" src={logo} alt="LOGO"></img>
           </Link>
           <button
             className="navbar-toggler"
@@ -90,7 +78,7 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <ul className="navbar-nav navBtns flex-row-lg ms-auto">
+            {/* <ul className="navbar-nav navBtns flex-row-lg ms-auto">
               <li className="nav-item">
                 <button type="button" className="btn btn-primary">
                   Book Online Session
@@ -105,7 +93,7 @@ function Navbar() {
                   Login
                 </button>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
