@@ -36,7 +36,7 @@ function Navbar() {
                   About
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="/"
@@ -71,7 +71,7 @@ function Navbar() {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   Contact us
